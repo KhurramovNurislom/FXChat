@@ -5,4 +5,6 @@ module com.example.fxchat {
                             
     opens com.example.fxchat to javafx.fxml;
     exports com.example.fxchat;
+    exports com.example.fxchat.controllers;
+    opens com.example.fxchat.controllers to javafx.fxml;
 }
