@@ -1,8 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
-            prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.fxchat.controllers.MainPageController"/>
+<BorderPane maxHeight="600.0" maxWidth="850.0" minHeight="420.0" minWidth="650.0" prefHeight="600.0" prefWidth="850.0"
+            xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.fxchat.controllers.MainPageController">
+    <left>
+        <VBox prefHeight="600.0" prefWidth="80.0" BorderPane.alignment="CENTER">
+            <children>
+                <JFXButton fx:id="id_btnMenu" contentDisplay="TOP" prefHeight="60.0" prefWidth="80.0" text="Menu"
+                           wrapText="true">
+                    <graphic>
+                        <ImageView fx:id="id_ivBtnMenu" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="id_btnAllChats" contentDisplay="TOP" prefHeight="60.0" prefWidth="80.0" text="Hammasi"
+                           wrapText="true">
+                    <graphic>
+                        <ImageView fx:id="id_ivBtnAllChats" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="id_btnChannelChats" contentDisplay="TOP" prefHeight="60.0" prefWidth="80.0"
+                           text="E'lonlar" wrapText="true">
+                    <graphic>
+                        <ImageView fx:id="id_ivBtnChannelChats" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="id_btnGroupChats" contentDisplay="TOP" prefHeight="60.0" prefWidth="80.0"
+                           text="Guruhlar" wrapText="true">
+                    <graphic>
+                        <ImageView fx:id="id_ivBtnGroupChats" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="id_btnPersonalChats" contentDisplay="TOP" prefHeight="60.0" prefWidth="80.0"
+                           text="Shaxsiy" wrapText="true">
+                    <graphic>
+                        <ImageView fx:id="id_ivBtnPersonalChats" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="id_btnUnreadChats" contentDisplay="TOP" prefHeight="60.0" prefWidth="80.0"
+                           text="O'qilmagan" wrapText="true">
+                    <graphic>
+                        <ImageView fx:id="id_ivBtnUnreadChats" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="id_btnEditChats" contentDisplay="TOP" prefHeight="60.0" prefWidth="80.0"
+                           text="Tahrirlash" wrapText="true">
+                    <graphic>
+                        <ImageView fx:id="id_ivBtnEditChats" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                </JFXButton>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <Pane prefHeight="600.0" prefWidth="270.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="id_tfSearch" layoutX="10.0" layoutY="13.0" prefHeight="34.0" prefWidth="250.0"
+                           promptText="Izlash"/>
+                <ListView fx:id="id_lvChats" layoutY="60.0" prefHeight="540.0" prefWidth="270.0"/>
+            </children>
+        </Pane>
+    </center>
+    <right>
+        <Pane prefHeight="600.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+            <children>
+                <Pane prefHeight="60.0" prefWidth="500.0"/>
+                <VBox layoutY="60.0" prefHeight="490.0" prefWidth="500.0"/>
+                <Pane layoutY="550.0" prefHeight="50.0" prefWidth="500.0">
+                    <children>
+                        <JFXButton fx:id="id_btnFileAttachment" prefHeight="50.0" prefWidth="50.0">
+                            <graphic>
+                                <ImageView fx:id="id_ivBtnFileAttachment" fitHeight="20.0" fitWidth="20.0"
+                                           pickOnBounds="true" preserveRatio="true"/>
+                            </graphic>
+                        </JFXButton>
+                        <TextField fx:id="id_tfMessags" layoutX="60.0" layoutY="10.0" prefHeight="30.0"
+                                   prefWidth="350.0" promptText="Izlash"/>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+    </right>
+</BorderPane>
